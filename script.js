@@ -59,6 +59,8 @@ function displayCats (){//loopin through each cat
     //disabling button after the cat has been adopted
     adoptButton.disabled = true;
 
+    catInfo.style.opacity ="0.5";
+
 });
 
     //Adding the cat details into the cat information container
