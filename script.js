@@ -1,4 +1,3 @@
-const { createElement } = require("react");
 
 const cats = [
     {
@@ -6,7 +5,7 @@ const cats = [
         breed: "Domestic Short hair",
         age: 1,
         adopted: false
-    }
+    },
 {
         name: "Big Boy",
         breed: "Domestic Short Hair",
@@ -21,13 +20,37 @@ const catContainer = document.getElementById("catContainer");
 
 const catForm = document.querySelector("#catForm");
 
-function displayCats (){
+function displayCats (){//loopin through each cat
     for(let i = 0; i < cats.length; i++){
         
         const cat = cats[i];
-    }
-    const catInfo = document.createElement("div");
-    const catName = document.createElement("uhhh... something");
+    
+    const catInfo = document.createElement("div");//creating a new div to hoold da cat info
+    const catName = document.createElement("h3");//creating a heading elment for cat name
+    catName.textContent = cat.name;
+
+    const catBreed = document.createElement("p");//creating paragraph for cat breed
+    catBreed.textContent = "Breed: " + cat.breed;
+
+    const catAge = document.createElement("p");//creating paragraph element for cat age
+    catAge.textContent ="Age: " + cat.age;
+
+    
+    const catStatus = document.createElement("p");//creating paragraph element for cat adoption status
+    catStatus.textContent = "Available";
+
+
+    //Adding the cat details into the cat information container
+    catInfo.appendChild(catName);
+    catInfo.appendChild(catBreed);
+    catInfo.appendChild(catAge);
+    catInfo.appendChild(catStatus);
+
+
+//Adding the cat information to webpage
+    catContainer.appendChild(catInfo);
     
 
 }
+}
+displayCats();
