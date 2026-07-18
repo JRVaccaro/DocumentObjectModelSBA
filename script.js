@@ -58,6 +58,13 @@ const catFragment = document.createDocumentFragment();
 
 
     adoptButton.addEventListener("click", function(){
+
+const adopted = confirm("Are you sure you would like to adopt this cat?")
+
+        if(!adopted){
+            return;
+        }
+
     cat.adopted = true;
     catStatus.textContent = "Adopted!! <3"
     adoptButton.textContent = "Adopted";
