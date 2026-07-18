@@ -44,12 +44,29 @@ function displayCats (){//loopin through each cat
     const catStatus = document.createElement("p");//creating paragraph element for cat adoption status
     catStatus.textContent = "Available";
 
+    //creating adopt button for cats
+    const adoptButton = document.createElement("button");
+
+    adoptButton.textContent ="Adopt me!";
+
+
+
+    adoptButton.addEventListener("click", function(){
+    cat.adopted = true;
+    catStatus.textContent = "Adopted!! <3"
+    adoptButton.textContent = "Adopted";
+
+});
 
     //Adding the cat details into the cat information container
     catInfo.appendChild(catName);
     catInfo.appendChild(catBreed);
     catInfo.appendChild(catAge);
     catInfo.appendChild(catStatus);
+    catInfo.appendChild(adoptButton);
+
+
+
 
 
 //Adding the cat information to webpage
@@ -58,6 +75,7 @@ function displayCats (){//loopin through each cat
 
 }
 }
+
 
 
 //add new cats from the form!
