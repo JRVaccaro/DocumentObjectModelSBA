@@ -20,6 +20,11 @@ const catContainer = document.getElementById("catContainer");
 
 const catForm = document.querySelector("#catForm");
 
+const catNameInput = document.getElementById("catName");
+const catBreedInput = document.getElementById("catBreed");
+const catAgeInput = document.getElementById("catAge");
+
+
 function displayCats (){//loopin through each cat
     for(let i = 0; i < cats.length; i++){
         
@@ -53,4 +58,35 @@ function displayCats (){//loopin through each cat
 
 }
 }
+
+
+//add new cats from the form!
+function addCat(event){
+    event.preventDefault();
+
+    const newCatName = catNameInput.value;
+    const newCatBreed = catBreedInput.value;
+    const newCatAge = catAgeInput.value;
+
+
+    if(newCatName ==="" || newCatBreed === "" newCatAge === ""){
+        alert("Please add all the information for the cat.")
+        return;
+    }
+    const newCat ={
+        name: newCatName,
+        breed: newCatBreed,
+        age: newCatAge,
+        adopted: false
+    };
+    cats.push(newCat);
+    catForm.reset();
+
+    catContainer.innerHTML = "";
+    displayCats();
+}
+
+
+catForm.addEventListener("submit", addCat);
+
 displayCats();
