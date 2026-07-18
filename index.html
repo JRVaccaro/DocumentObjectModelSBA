@@ -8,14 +8,32 @@
     <script src = "script.js" defer></script>
 </head>
 <body>
+        <main id ="app">
     <header> <h1> Cats Available</h1></header>
     <p>Help a furry feline find a furr-ever home!</p>
-    <main id ="app">
+
+<section>
+            <h2>Add a Cat</h2>
+
+<form id="catForm">
+
+            <input type ="text" id="catName" placeholder="Cat Name" required>
+            <input type="text" id="catBreed" placeholder="Breed" required>
+            <input type="number" id="catAge" placeholder="Age" min="0" required>
+    <button type ="submit">Add Cat</button>
+
+        </form>
+
+        </section>
 
         <section>
             
-            <h2>Adopt a cat</h2>
-        <form id="catForm">
-            <div class ="catContainer">
+            <h2>Available Cats</h2>
+        
+            <div class ="catContainer"> </div>
+
+            </section>
+
+            </main>
 </body>
 </html>
