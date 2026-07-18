@@ -79,7 +79,7 @@ const adopted = confirm("Are you sure you would like to adopt this cat?")
     const parentContainer = adoptButton.parentNode;
 
     //changing the style container when cat is adopted
-    parentContainer.style.backgroundColr ="#ffe9ec";
+    parentContainer.style.backgroundColor ="#ffe9ec";
 
 });
 
