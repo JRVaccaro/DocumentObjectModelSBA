@@ -56,6 +56,9 @@ function displayCats (){//loopin through each cat
     catStatus.textContent = "Adopted!! <3"
     adoptButton.textContent = "Adopted";
 
+    //disabling button after the cat has been adopted
+    adoptButton.disabled = true;
+
 });
 
     //Adding the cat details into the cat information container
