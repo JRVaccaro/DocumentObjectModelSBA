@@ -26,6 +26,12 @@ const catAgeInput = document.getElementById("catAge");
 
 
 function displayCats (){//loopin through each cat
+
+//temp container to hold cat info before adding to page
+
+const catFragment = document.createDocumentFragment();
+
+
     for(let i = 0; i < cats.length; i++){
         
         const cat = cats[i];
@@ -82,10 +88,14 @@ function displayCats (){//loopin through each cat
 
 
 //Adding the cat information to webpage
-    catContainer.appendChild(catInfo);
+    catFragment.appendChild(catInfo);
     
 
 }
+
+//adding all the cats to the page at once
+catContainer.appendChild(catFragment);
+
 }
 
 
