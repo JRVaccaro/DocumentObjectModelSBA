@@ -61,6 +61,13 @@ function displayCats (){//loopin through each cat
 
     catInfo.style.opacity ="0.5";
 
+
+    //making a parentnode to move from the adopt button to the cat info container
+    const parentContainer = adoptButton.parentNode;
+
+    //changing the style container when cat is adopted
+    parentContainer.style.backgroundColr ="#ffe9ec";
+
 });
 
     //Adding the cat details into the cat information container
