@@ -69,8 +69,8 @@ function addCat(event){
     const newCatAge = catAgeInput.value;
 
 
-    if(newCatName ==="" || newCatBreed === "" newCatAge === ""){
-        alert("Please add all the information for the cat.")
+    if(newCatName ==="" || newCatBreed === "" || newCatAge === ""){
+        alert("Please add all the information for the cat.");
         return;
     }
     const newCat ={
